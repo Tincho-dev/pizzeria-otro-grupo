@@ -1,0 +1,34 @@
+### CREAR un alimento ( pizza , empanadas o postres )
+POST http://localhost:9000/api/foods
+Content-Type: application/json
+
+{
+  "name": "Calabressa",
+  "price": 750,
+  "description": "Salsa, muzzarella, cantimpalo, aceitunas y orégano.",
+  "measurement": "1",
+  "category": "pizzas",
+  "show": "0"
+}
+
+### PARCHE (UPDATE) un alimento
+PATCH http://localhost:9000/api/foods/621ed46b02cc41d85ff93777
+Content-Type: application/json
+
+{
+   "price":1000
+}
+
+### OBTENER todos los alimentos
+# GET http://localhost:9000/api/foods?category=postres
+# GET http://localhost:9000/api/foods?show=1
+GET http://localhost:9000/api/foods
+Content-Type: application/json
+
+### ELIMINAR un alimento
+DELETE http://localhost:9000/api/foods/6233757a53d8392131645aea
+Content-Type: application/json
+
+### OBTENER detalle de un producto
+GET http://localhost:9000/api/foods/6219bdfa1e55802efeb61087
+Content-Type: application/json

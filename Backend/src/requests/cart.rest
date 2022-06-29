@@ -1,0 +1,58 @@
+### Eliminamos un elemento del carrito
+DELETE http://localhost:3001/api/cart
+Content-Type: application/json; charset=utf-8
+
+{
+    "productId":"6219bdd2827cc0c706dadad9",
+    "userId":"61fefe099cd102d5143243eb"
+}
+
+### Obtener el Carrito de compra de un cliente
+GET http://localhost:3001/api/cart/61fefe099cd102d5143243eb
+Content-Type: application/json; charset=utf-8
+
+### Agregar al carrito un producto
+POST http://localhost:3001/api/cart/
+Content-Type: application/json; charset=utf-8
+
+{
+    "productId": "62215627b0202a0d5d60f68c",
+    "userId": "61fefe099cd102d5143243eb"
+}
+
+### Eliminar todo el carrito
+DELETE http://localhost:3001/api/cart/61fefe099cd102d5143243eb
+Content-Type: application/json; charset=utf-8
+
+
+### Aumentar la cantidad de un producto
+POST http://localhost:3001/api/cart/more
+Content-Type: application/json; charset=utf-8
+
+{
+"productId":"6219bdd2827cc0c706dadad9",
+"userId":"61fefe099cd102d5143243eb"
+}
+
+### Disminuir la cantidad de un producto
+POST http://localhost:3001/api/cart/less
+Content-Type: application/json; charset=utf-8
+
+{
+"productId":"6219bdd2827cc0c706dadad9",
+"userId":"61fefe099cd102d5143243eb"
+}
+
+### Realizar la orden del pedido
+GET http://localhost:3001/api/cart/order/61fefe099cd102d5143243eb
+Content-Type: application/json; charset=utf-8
+
+### Realizar un commentario
+POST http://localhost:3001/api/cart/comment
+Content-Type: application/json; charset=utf-8
+
+{
+    "comment":"quiero helado",
+    "userId":"61fefe099cd102d5143243eb"
+}
+
